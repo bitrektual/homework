@@ -1,8 +1,16 @@
 class Check_sum:                                                      
     def __init__(self, X):                                            
-        Summ = X                                                      
+        self.summ = X                                                      
     def check(self, a, b, c):                                         
-        if (a + b + c) == self:                                       
+        if (a + b + c) == self.summ:                                       
             return 'Да, это сумма этих чисел'                         
         else:                                                         
-            return 'Нет, это не сумма этих чисел' 
+            return 'Нет, это не сумма этих чисел'
+                                                                      
+print('Введите предполагаемую сумму')                                 
+hip = Check_sum(float(input()))                                       
+print('Введите числа')                                                
+num1 = float(input())                                                 
+num2 = float(input())                                                 
+num3 = float(input())                                           
+print(hip.check(num1, num2, num3))
