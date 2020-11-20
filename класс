@@ -1,0 +1,8 @@
+class Check_sum:                                                      
+    def __init__(self, X):                                            
+        Summ = X                                                      
+    def check(self, a, b, c):                                         
+        if (a + b + c) == self:                                       
+            return 'Да, это сумма этих чисел'                         
+        else:                                                         
+            return 'Нет, это не сумма этих чисел' 
