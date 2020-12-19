@@ -1,5 +1,8 @@
+import unittest
+
+
 class Element:
-    def __init__(self, value = None):
+    def __init__(self, value=None):
         self.value = value
         self.prev = None
 
@@ -38,3 +41,27 @@ class Queue:
         while (self.head):
             takenelement = self.head
             self.head = takenelement.prev
+
+
+class TestQueue(unittest.TestCase):
+
+    def test_enqueue_dequeue(self):
+        queue_for_tests = Queue()
+        queue_for_tests.enqueue(1)
+        self.assertEqual(queue_for_tests.tail.value, 1)
+        self.assertEqual(queue_for_tests.dequeue(), 1)
+
+    def test_empty(self):
+        queue_for_tests = Queue()
+        self.assertIsNone(queue_for_tests.dequeue())
+        self.assertEqual(queue_for_tests.size, 0)
+
+    def test_clear(self):
+        queue_for_tests = Queue()
+        queue_for_tests.enqueue(1)
+        queue_for_tests.clear()
+        self.assertIsNone(queue_for_tests.dequeue())
+        self.assertEqual(queue_for_tests.size, 0)
+
+if __name__ == '__main__':
+    unittest.main()
