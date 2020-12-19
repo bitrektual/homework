@@ -25,7 +25,7 @@ class Queue:
         takenelement = self.head
         self.head = takenelement.prev
         return takenelement.value
-    
+
     def size(self):
         lastinque = self.head
         sizeofqueue = 0
@@ -33,4 +33,8 @@ class Queue:
             sizeofqueue = sizeofqueue + 1
             lastinque = lastinque.prev
         return sizeofqueue
-    
+
+    def clear(self):
+        while (self.head):
+            takenelement = self.head
+            self.head = takenelement.prev
