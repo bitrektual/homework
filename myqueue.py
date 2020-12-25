@@ -24,7 +24,7 @@ class Queue:
 
     def dequeue(self):
         if self.head is None:
-            return 'Очередь пустая'
+            return None
         takenelement = self.head
         self.head = takenelement.prev
         return takenelement.value
