@@ -12,15 +12,14 @@ class Queue:
 
     def enqueue(self, newvalue):
         newelement = Element(newvalue)
+        self.size = self.size + 1
         if self.head is None:
             self.head = newelement
             self.tail = self.head
-            self.size = 1
             return
         lastelement = self.tail
         self.tail = newelement
         lastelement.prev = newelement
-        self.size = self.size + 1
 
     def dequeue(self):
         if self.head is None:
