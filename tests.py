@@ -16,6 +16,7 @@ class TestQueue(unittest.TestCase):
         queue_for_tests = Queue()
         self.assertIsNone(queue_for_tests.dequeue())
         self.assertEqual(queue_for_tests.size, 0)
+        self.assertTrue(queue_for_tests.is_empty())
         
     def test_clear(self):
         queue_for_tests = Queue()
