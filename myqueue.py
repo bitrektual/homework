@@ -8,7 +8,7 @@ class Queue:
     def __init__(self):
         self.head = None
         self.tail = None
-        self.size = None
+        self.size = 0
 
     def enqueue(self, newvalue):
         newelement = Element(newvalue)
@@ -29,16 +29,16 @@ class Queue:
         self.head = takenelement.prev
         return takenelement.value
 
-    def size(self):
+    def size_of_queue(self):
         return self.size
 
-    def head(self):
-        return self.head
+    def head_of_queue(self):
+        return self.head.value
 
-    def tail(self):
-        return self.tail
+    def tail_of_queue(self):
+        return self.tail.value
 
     def clear(self):
-        while (self.head):
-            takenelement = self.head
-            self.head = takenelement.prev
+        self.head = None
+        self.tail = None
+        self.size = 0
