@@ -30,7 +30,7 @@ class Queue:
         return takenelement.value
 
     def is_empty(self):
-        if self.size is 0:
+        if self.head is None:
             return True
         return False
 
