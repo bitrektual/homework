@@ -29,6 +29,11 @@ class Queue:
         self.head = takenelement.prev
         return takenelement.value
 
+    def is_empty(self):
+        if self.size is 0:
+            return True
+        return False
+
     def size_of_queue(self):
         return self.size
 
